@@ -1,0 +1,128 @@
+body{
+    padding:0;
+    margin:0;
+  }
+  .l-container{
+    background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    flex-direction: column;
+
+  }
+  .l-form-cont{
+  padding:35px;
+    background-color: white;
+   
+  }
+  .l-form-cont h1{
+    color:#4285F4;
+    font-weight: 800;
+    /* line-height: 20px; */
+    margin:0;
+    padding:0;
+  }
+  .l-inputCont{
+    margin-top:10px;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: black; */
+    /* border:1px solid black; */
+  }
+  .l-label-cont{
+    display:flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top:10px;
+    align-items: center;
+    gap:10px;
+    
+  }
+  .l-label-cont h2{
+    line-height: 20px;
+    margin:5px;
+    padding:0;
+    font-size:18px;
+  }
+  .l-label-cont h3{
+    line-height: 20px;
+    margin:5px;
+    padding:0;
+    color:red;
+    font-size:14px;
+  margin-left:-8px;
+  }
+  .l-input{
+    width:350px;
+    height:37px;
+    border-radius: 3px;
+    outline: none;
+    border:0;
+    font-size: 18px;
+    background-color: rgba(58, 41, 41, 0.2);
+  }
+  .l-button{
+    margin-top: 13px;
+    width:100%;
+    height:37px;
+    background-color: white;
+    border-radius: 3px;
+    outline: none;
+   border:0px;
+    cursor: pointer;
+    background-color: #4285F4;
+    color:white;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .l-button:hover{
+    background-color: #3977da;
+  }
+  .l-inp-cont{
+    display:flex;
+    flex-direction: column-reverse;
+  }
+  .register-text{
+    /* line-height: 10px; */
+    padding:0;
+   
+    margin-top:10px;
+    font-size: 16px;
+    color:#3977da;
+    outline: none;
+    text-decoration: none;
+  }
+
+.l-container a{
+  text-decoration: none;
+}
+.l-inc-text{
+padding:0;
+margin:0;
+color:red;
+}
+@media only screen and (max-width: 450px) {
+.l-form-cont h1{
+  font-size: 23px;
+}
+  .l-form-cont{
+    padding:30px;
+    width:75%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .l-inputCont{
+      width:100%;
+    }
+    .l-input{
+      width:100%;
+    }
+
+}
