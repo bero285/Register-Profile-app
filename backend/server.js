@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "../public")));
 
-const dbURI = "mongodb database link";
+const dbURI =
+  "mongodb databse link";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(
@@ -26,10 +27,7 @@ app.use(
 
 app.use(express.static("public"));
 
-// Define a route to serve the manifest.json file
-// app.get("/manifest.json", (req, res) => {
-//   res.sendFile(__dirname + "/public/manifest.json");
-// });
+
 app.get("/manifest.json", (req, res) => {
   res.sendFile(path.join(__dirname, "manifest.json"));
 });
@@ -79,7 +77,7 @@ app.post("/api/login", (req, res) => {
         } else {
           console.log("incorrect password");
           res.status(401).json({
-            // Unauthorized status code
+        
             success: false,
             error: "Incorrect password",
           });
@@ -87,7 +85,7 @@ app.post("/api/login", (req, res) => {
       } else {
         console.log("user not found");
         res.status(404).json({
-          // Not Found status code
+ 
           success: false,
           error: "User not found",
         });
@@ -96,26 +94,11 @@ app.post("/api/login", (req, res) => {
     .catch((err) => {
       console.log(err);
       res.status(500).json({
-        // Internal Server Error status code
+     
         success: false,
         error: "Internal server error",
       });
-      // if (user) {
-      //   if (user.password === password) {
-      //     req.session.userId = user._id;
-      //     console.log("correct password");
-      //     res.status(201).json({
-      //       success: true,
-      //       user: user,
-      //     });
-      //   } else {
-      //     console.log("inccorect password");
-      //     res.status(401).json({  // Unauthorized status code
-      //       success: false,
-      //       error: "Incorrect password",
-      //     });
-      //   }
-      // }
+      
     })
     .catch((err) => {
       console.log(err);
